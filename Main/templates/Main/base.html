@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{# HEADER RIGHT HERE#}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="devices.min.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>FortanHotware</title>
+
+<nav class="navbar navbar-inverse navbar-fixed-top"style="background-color: #333333;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{% url 'Home' %}"><img class="navbar-brand" style="width: 95px; height: 80px" src="../../static/M.J.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+          <li id="nav"><a href="{% url 'Home' %}"><span class="glyphicon glyphicon-home"> Home</span></a></li>
+          <li id="nav"><a href="{% url 'Services' %}"><span class="glyphicon glyphicon-bookmark"></span> Services</a></li>
+        <li id="nav"><a href="{% url 'AboutUs' %}"><span class="glyphicon glyphicon-book"></span> About Us</a></li>
+        <li id="nav"><a href="{% url 'ContactUs' %}"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a class="ar" href="https://www.youtube.com/channel/UC7mZFUxlg5DKSEMayHZpg5Q?disable_polymer=true">M.J.Studios</a></li>
+            <li><a class="ar" href="{% url 'FortanGaming' %}">M.J.Games</a></li>
+            <li><a class="ar" href="https://teespring.com/stores/mjstudios?page=1">M.J.Apparel</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="nav"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li id="nav"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li id="nav"><a href="#"><span class="glyphicon glyphicon-heart"></span> Donations</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</head>
+
+
+{#BODY RIGHT HERE#}
+<body>
+{% block body %}
+
+{% endblock body %}
+</body>
+
+
+{# FOOTER RIGHT HERE#}
+<footer>
+    <a href="https://www.facebook.com/sourena.khanzadeh" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/FHotware" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/channel/UC0Hdlfq7jxYOPdNpMfa3FyQ?view_as=subscriber" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/fortanhotware/" class="fa fa-instagram"></a>
+    <a href="https://www.pinterest.ca/ksourena3867/" class="fa fa-pinterest"></a>
+    <p>©2018 M.J.Studios</p>
+</footer>
+
+{# STYLES RIGHT HERE#}
+<style>
+    .dropdown-menu{
+        background-color: #00DBFF;
+    }
+
+    .ar{
+        border-bottom: 2px solid #3b5998;
+        transition: padding 0.5s ease-in-out;
+    }
+
+    .ar:hover{
+        padding: 20px;
+    }
+
+    #nav{
+        transition: font-size 2s ease-in-out;
+    }
+    #nav:hover{
+        font-size: 24pt;
+        text-decoration: underline;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        color: white;
+        transition: transform 2s ease-in-out, margin-top 1s ease-in-out;
+    }
+    .fa-twitter{  background-color: #008cff;  }
+    .fa-facebook{ background-color: #3b5998;  }
+    .fa-youtube{ background-color: #ff0000;  }
+    .fa-instagram{ background-color: #ff0260;  }
+    .fa-pinterest{ background-color:  #c8232c;  }
+
+    .fa:hover{
+        transform: rotate(360deg);
+        margin-top: 20px;
+    }
+
+    footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       height: 115px;
+       width: 100%;
+       background-color: #333333;
+       color: white;
+       text-align: center;
+    }
+
+    body{
+        background-color: #555555;
+    }
+</style>
+
+
+</html>
